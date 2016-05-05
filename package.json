@@ -1,0 +1,29 @@
+{
+  "name": "gitkit",
+  "displayName": "GitKit",
+  "description": "an awesome pack of utils for git",
+  "version": "0.0.1",
+  "publisher": "albizures",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.status"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "extension.status",
+      "title": "Gitkit: status"
+    }]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "vscode": "^0.11.0"
+  }
+}
