@@ -8,6 +8,7 @@ GitKit is a VSCode extension with some common commands of git
 * GitKit: Add All
 * GitKit: Commit
 * GitKit: Ignore Current File
+* GitKit: Revert Current File
 
 > More commads soon
 
@@ -15,7 +16,6 @@ GitKit is a VSCode extension with some common commands of git
 ## Whishlist
 
 * GitKit: Remove
-* GitKit: Revert Current File
 * GitKit: Commit CZ Format
 * GitKit: Open Repository
 * GitKit: Add remote
