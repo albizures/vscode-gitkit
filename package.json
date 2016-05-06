@@ -1,7 +1,7 @@
 {
   "name": "gitkit",
   "displayName": "GitKit",
-  "description": "an awesome pack of utils for git",
+  "description": "An awesome pack of common commands for git",
   "version": "0.1.0",
   "publisher": "albizures",
   "engines": {
@@ -12,7 +12,8 @@
     "git",
     "utils",
     "add",
-    "commit" 
+    "commit",
+    "revert" 
   ],
   "bugs": {
     "url": "https://github.com/albizures/vscode-gitkit/issues"
