@@ -8,6 +8,8 @@ function addCommand(context, name) {
 function activate(context) {
   addCommand(context, 'status');
   addCommand(context, 'addCurrentFile');
+  addCommand(context, 'commit');
+  addCommand(context, 'addAll');
 }
 exports.activate = activate;
 

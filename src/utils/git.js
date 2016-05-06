@@ -21,6 +21,8 @@ function exec(args, cb) {
 
   cp.on('close', function (code) {
     console.log('close');
+    cp.stdin.pause();
+    cp.kill();
     if(cb) cb(err, result, args);
   });
 };
@@ -32,15 +34,21 @@ exports.status = function (cb) {
   exec(['status'], cb);
 };
 
-exports.addPath = function (addpath, cb) {
+exports.addPath = function (addPath, cb) {
   console.log('git.add');
-    
-  exec(['add', addpath.replace(rootPath + '/', '')], cb);
+  exec(['add', addPath.replace(rootPath + '/', '')], cb);
 };
 //git reset <file>
 exports.addAll = function (cb) {
-  console.log('git.add');
+  console.log('git.addAll');
   exec(['add', '--all'], cb);
 };
 
-exports
+exports.commitWithFile = function (filePath, cb) {
+  console.log('git.commitWithFile');
+  exec([
+    'commit',
+    '--cleanup=strip',
+    '--file=' + filePath.replace('\\' + rootPath, '')
+  ], cb);
+}

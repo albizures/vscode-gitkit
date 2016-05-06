@@ -27,16 +27,24 @@
   ],
   "activationEvents": [
     "onCommand:extension.status",
-    "onCommand:extension.addCurrentFile"
+    "onCommand:extension.addCurrentFile",
+    "onCommand:extension.commit",
+    "onCommand:extension.addAll"
   ],
   "main": "./src/extension.js",
   "contributes": {
     "commands": [{
       "command": "extension.status",
-      "title": "Gitkit: Status"
+      "title": "GitKit: Status"
     }, {
       "command": "extension.addCurrentFile",
-      "title": "Gitkit: Add Current File"
+      "title": "GitKit: Add Current File"
+    }, {
+      "command": "extension.commit",
+      "title": "GitKit: Commit"
+    }, {
+      "command": "extension.addAll",
+      "title": "GitKit: Add All"
     }]
   },
   "scripts": {
