@@ -2,7 +2,7 @@
   "name": "gitkit",
   "displayName": "GitKit",
   "description": "an awesome pack of utils for git",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "albizures",
   "engines": {
     "vscode": "^1.0.0"
