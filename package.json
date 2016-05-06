@@ -30,7 +30,8 @@
     "onCommand:extension.addCurrentFile",
     "onCommand:extension.commit",
     "onCommand:extension.addAll",
-    "onCommand:extension.ignoreCurrentFile"
+    "onCommand:extension.ignoreCurrentFile",
+    "onCommand:extension.revertCurrentFile"
   ],
   "main": "./src/extension.js",
   "contributes": {
@@ -49,6 +50,9 @@
     }, {
       "command": "extension.ignoreCurrentFile",
       "title": "GitKit: Ignore Current File"
+    }, {
+      "command": "extension.revertCurrentFile",
+      "title": "GitKit: Revert Current File"
     }]
   },
   "scripts": {

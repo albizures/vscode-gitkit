@@ -51,4 +51,13 @@ exports.commitWithFile = function (filePath, cb) {
     '--cleanup=strip',
     '--file=' + filePath.replace('\\' + rootPath, '')
   ], cb);
-}
+};
+
+exports.revertPath = function (filePath, cb) {
+  console.log('git.revertPath');
+  exec([ //git checkout -q -- src/commands/status.js
+    'checkout',
+    '-q',
+    filePath.replace('\\' + rootPath, '')
+  ], cb);
+};

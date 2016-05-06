@@ -12,6 +12,7 @@ exports.activate = function (context) {
   addCommand(context, 'commit');
   addCommand(context, 'addAll');
   addCommand(context, 'ignoreCurrentFile');
+  addCommand(context, 'revertCurrentFile');
 };
 
 exports.deactivate = function () {};
