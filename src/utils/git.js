@@ -58,6 +58,7 @@ exports.revertPath = function (filePath, cb) {
   exec([ //git checkout -q -- src/commands/status.js
     'checkout',
     '-q',
+    '--',
     filePath.replace('\\' + rootPath, '')
   ], cb);
 };
