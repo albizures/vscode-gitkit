@@ -7,7 +7,7 @@
   "engines": {
     "vscode": "^1.0.0"
   },
-  "icon": "images/icon.svg",
+  "icon": "images/icon.png",
   "keywords": [
     "git",
     "utils",
