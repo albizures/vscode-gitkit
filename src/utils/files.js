@@ -25,3 +25,9 @@ exports.open = function (fileName, cb) {
     if(cb) cb(err);
   }
 };
+
+exports.getCurrentFile = function () {
+  var activeEditor = window.activeTextEditor;
+  var document = activeEditor && activeEditor.document;
+  return document && document.fileName;
+};

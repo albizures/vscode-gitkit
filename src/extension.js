@@ -6,12 +6,8 @@ function addCommand(context, name) {
   );
 }
 function activate(context) {
-  var disposable = vscode.commands.registerCommand('extension.sayHello', function () {
-    
-  });
   addCommand(context, 'status');
-  
-  context.subscriptions.push(disposable);
+  addCommand(context, 'addCurrentFile');
 }
 exports.activate = activate;
 

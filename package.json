@@ -7,17 +7,36 @@
   "engines": {
     "vscode": "^1.0.0"
   },
+  "icon": "images/icon.svg",
+  "keywords": [
+    "git",
+    "utils",
+    "add",
+    "commit" 
+  ],
+  "bugs": {
+    "url": "https://github.com/albizures/vscode-gitkit/issues"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/albizures/vscode-gitkit"
+  },
+  "author": "Jose Albizures <albizures3601@gmail.com>",
   "categories": [
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.status"
+    "onCommand:extension.status",
+    "onCommand:extension.addCurrentFile"
   ],
   "main": "./src/extension.js",
   "contributes": {
     "commands": [{
       "command": "extension.status",
-      "title": "Gitkit: status"
+      "title": "Gitkit: Status"
+    }, {
+      "command": "extension.addCurrentFile",
+      "title": "Gitkit: Add Current File"
     }]
   },
   "scripts": {

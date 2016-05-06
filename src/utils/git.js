@@ -21,7 +21,7 @@ function exec(args, cb) {
 
   cp.on('close', function (code) {
     console.log('close');
-    if(cb) cb(err, result);
+    if(cb) cb(err, result, args);
   });
 };
 
@@ -31,3 +31,16 @@ exports.status = function (cb) {
   console.log('git.status');
   exec(['status'], cb);
 };
+
+exports.addPath = function (addpath, cb) {
+  console.log('git.add');
+    
+  exec(['add', addpath.replace(rootPath + '/', '')], cb);
+};
+//git reset <file>
+exports.addAll = function (cb) {
+  console.log('git.add');
+  exec(['add', '--all'], cb);
+};
+
+exports
