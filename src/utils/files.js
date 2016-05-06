@@ -27,18 +27,30 @@ exports.open = function (fileName, cb) {
   }
 };
 
-exports.getCurrentFile = function () {
+exports.getCurrentFile = function (relative) {
   var activeEditor = window.activeTextEditor;
   var document = activeEditor && activeEditor.document;
+  if (relative && document && document.fileName) {
+    return document.fileName.replace(rootPath, '');
+  }
   return document && document.fileName;
 };
 exports.removeFile = function (pathFile, cb) {
   fs.unlink(path.join(rootPath, pathFile.replace(rootPath, '')), cb);
-}
+};
 
 exports.closeCurrentFile = function () {
   commands.executeCommand('workbench.action.closeActiveEditor');
-}
+};
+
 exports.saveEvent = function (cb) {
   workspace.onDidSaveTextDocument(cb);
+};
+
+exports.appendLine = function (pathFile, line, cb) {
+  fs.appendFile(path.join(rootPath, pathFile.replace(rootPath, '')), line, cb);
+};
+
+exports.getRelativePath = function (absolutePath) {
+  return absolutePath.replace(rootPath, '');
 }

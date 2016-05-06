@@ -29,7 +29,8 @@
     "onCommand:extension.status",
     "onCommand:extension.addCurrentFile",
     "onCommand:extension.commit",
-    "onCommand:extension.addAll"
+    "onCommand:extension.addAll",
+    "onCommand:extension.ignoreCurrentFile"
   ],
   "main": "./src/extension.js",
   "contributes": {
@@ -45,6 +46,9 @@
     }, {
       "command": "extension.addAll",
       "title": "GitKit: Add All"
+    }, {
+      "command": "extension.ignoreCurrentFile",
+      "title": "GitKit: Ignore Current File"
     }]
   },
   "scripts": {

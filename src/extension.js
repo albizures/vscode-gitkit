@@ -5,15 +5,13 @@ function addCommand(context, name) {
     vscode.commands.registerCommand('extension.'+ name, require('./commands/' + name))
   );
 }
-function activate(context) {
+
+exports.activate = function (context) {
   addCommand(context, 'status');
   addCommand(context, 'addCurrentFile');
   addCommand(context, 'commit');
   addCommand(context, 'addAll');
-}
-exports.activate = activate;
+  addCommand(context, 'ignoreCurrentFile');
+};
 
-function deactivate() {
-  
-}
-exports.deactivate = deactivate;
+exports.deactivate = function () {};
